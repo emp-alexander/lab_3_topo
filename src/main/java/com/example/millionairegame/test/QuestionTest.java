@@ -1,5 +1,6 @@
 package com.example.millionairegame.test;
 
+import com.example.millionairegame.Question;
 import org.junit.Test;
 
 public class QuestionTest {
