@@ -3,6 +3,7 @@ package com.example.millionairegame.test;
 import com.example.millionairegame.Game;
 
 import com.example.millionairegame.Question;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,4 +41,13 @@ public class GameTest {
     public void gameWithParamCreationTest(){
         Game game = new Game(questions);
     }
+
+    @Test
+    public void checkAnswerTest(){
+        Game game = new Game();
+        Assert.assertEquals(true, game.checkAnswer(0,0));
+    }
+
+
+
 }
