@@ -26,8 +26,8 @@ public class GameTest {
         hint502 = new int[]{4, 2};
         Collections.addAll(answer1, "тесто", "золото", "сено", "каша");
         Collections.addAll(answer2, "Питсбург", "Москва", "Санкт-Петербург", "Киров");
-        q1 = new Question("Из чего сделан колобок?", 0,  answer1, 0, hint501);
-        q2 = new Question("Культурная столица России?", 1,  answer2, 3, hint502);
+        q1 = new Question("Из чего сделан колобок?", 0,  answer1, 0, hint501, 1);
+        q2 = new Question("Культурная столица России?", 1,  answer2, 3, hint502, 2);
         questions = new ArrayList<>();
         Collections.addAll(questions, q1, q2);
     }
@@ -53,6 +53,16 @@ public class GameTest {
         Game game = new Game(questions);
         Assert.assertEquals(1, game.getNextQuestion().getId());
         Assert.assertEquals(null, game.getNextQuestion());
+    }
+
+    @Test
+    public void addScoreTest(){
+        Game game = new Game(questions);
+        Assert.assertEquals(0, game.getScore());
+        game.addScore(game.getQuestions().get(0));
+        Assert.assertEquals(500, game.getScore());
+        game.addScore(game.getQuestions().get(1));
+        Assert.assertEquals(1500, game.getScore());
     }
 
 }
