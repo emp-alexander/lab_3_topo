@@ -18,9 +18,8 @@ public class Game {
         hint = new boolean[]{true, true, true};
     }
 
-    public boolean checkAnswer(int answ, int quest){
-        //todo реализовать метод checkAnswer позднее
-        if(answ == quest){
+    public boolean checkAnswer(int answ, Question quest){
+        if(answ == quest.getCorrectAnswerIndex()){
             return true;
         }
         else
