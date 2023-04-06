@@ -17,4 +17,15 @@ public class Game {
         currentQuestionIndex = 0;
         hint = new boolean[]{true, true, true};
     }
+
+    public boolean checkAnswer(int answ, int quest){
+        //todo реализовать метод checkAnswer позднее
+        if(answ == quest){
+            return true;
+        }
+        else
+            return false;
+    }
+
+
 }
