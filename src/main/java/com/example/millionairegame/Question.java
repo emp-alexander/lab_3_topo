@@ -18,4 +18,44 @@ public class Question {
         this.hint50 = hint50;
     }
     public Question(){};
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getQuastionsText() {
+        return quastionsText;
+    }
+
+    public void setQuastionsText(String quastionsText) {
+        this.quastionsText = quastionsText;
+    }
+
+    public List<String> getAnswerOptions() {
+        return answerOptions;
+    }
+
+    public void setAnswerOptions(List<String> answerOptions) {
+        this.answerOptions = answerOptions;
+    }
+
+    public int getCorrectAnswerIndex() {
+        return correctAnswerIndex;
+    }
+
+    public void setCorrectAnswerIndex(int correctAnswerIndex) {
+        this.correctAnswerIndex = correctAnswerIndex;
+    }
+
+    public int[] getHint50() {
+        return hint50;
+    }
+
+    public void setHint50(int[] hint50) {
+        this.hint50 = hint50;
+    }
 }

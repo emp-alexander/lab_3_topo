@@ -27,5 +27,15 @@ public class Game {
             return false;
     }
 
+    public Question getNextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.size()) {
+            return questions.get(currentQuestionIndex);
+        } else {
+            return null;
+        }
+    }
+
+
 
 }
