@@ -10,12 +10,15 @@ public class Question {
 
     private int[] hint50;
 
-    public Question(String quastionsText, int id, List<String> answerOptions, int correctAnswerIndex, int[] hint50) {
+    private int difficulty;
+
+    public Question(String quastionsText, int id, List<String> answerOptions, int correctAnswerIndex, int[] hint50, int difficulty) {
         this.quastionsText = quastionsText;
         this.id = id;
         this.answerOptions = answerOptions;
         this.correctAnswerIndex = correctAnswerIndex;
         this.hint50 = hint50;
+        this.difficulty = difficulty;
     }
     public Question(){};
 
@@ -57,5 +60,13 @@ public class Question {
 
     public void setHint50(int[] hint50) {
         this.hint50 = hint50;
+    }
+
+    public int getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
     }
 }

@@ -29,6 +29,6 @@ public class QuestionTest {
 
     @Test
     public void questionWithParamCreationTest(){
-      Question question = new Question("Культурная столица России?", 1, answer, 3, hint501); //вопрос, индекс вопроса, варианты ответо, верный ответ, подсказка50/50
+      Question question = new Question("Культурная столица России?", 1, answer, 3, hint501, 1); //вопрос, индекс вопроса, варианты ответо, верный ответ, подсказка50/50
     }
 }
