@@ -77,6 +77,20 @@ public class Game {
         }
     }
 
+    public Question getRandomQuestion(ArrayList<Question> questions, int difficulty) {
+        ArrayList<Question> questionsByDifficulty = new ArrayList<Question>();
+        for (Question question : questions) {
+            if (question.getDifficulty() == difficulty) {
+                questionsByDifficulty.add(question);
+            }
+        }
+        if (questionsByDifficulty.size() == 0) {
+            return null; // Если в списке нет вопросов с заданной сложностью
+        }
+        int randomIndex = (int) (Math.random() * questionsByDifficulty.size());
+        return questionsByDifficulty.get(randomIndex);
+    }
+
 
 
 }
