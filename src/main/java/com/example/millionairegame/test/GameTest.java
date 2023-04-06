@@ -48,6 +48,11 @@ public class GameTest {
         Assert.assertEquals(true, game.checkAnswer(0,0));
     }
 
-
+    @Test
+    public void getNextQuestionTest(){
+        Game game = new Game(questions);
+        Assert.assertEquals(1, game.getNextQuestion().getId());
+        Assert.assertEquals(null, game.getNextQuestion());
+    }
 
 }
