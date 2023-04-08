@@ -55,6 +55,17 @@ public class Game {
         this.currentQuestionIndex = currentQuestionIndex;
     }
 
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public boolean[] getHint() {
+        return hint;
+    }
+
+    public void setHint(boolean[] hint) {
+        this.hint = hint;
+    }
 
     public void addScore(Question question){
         switch (question.getDifficulty()){
@@ -77,17 +88,24 @@ public class Game {
     }
 
     public Question getRandomQuestion(ArrayList<Question> questions, int difficulty) {
-        ArrayList<Question> questionsByDifficulty = new ArrayList<Question>();
-        for (Question question : questions) {
-            if (question.getDifficulty() == difficulty) {
-                questionsByDifficulty.add(question);
+
+        if (currentQuestionIndex < questions.size()) {
+            ArrayList<Question> questionsByDifficulty = new ArrayList<Question>();
+            for (Question question : questions) {
+                if (question.getDifficulty() == difficulty) {
+                    questionsByDifficulty.add(question);
+                }
             }
+            if (questionsByDifficulty.size() == 0) {
+                return null; // Если в списке нет вопросов с заданной сложностью
+            }
+            int randomIndex = (int) (Math.random() * questionsByDifficulty.size());
+            currentQuestionIndex = questionsByDifficulty.get(randomIndex).getId();
+            return questionsByDifficulty.get(randomIndex);
+        } else {
+            return null;
         }
-        if (questionsByDifficulty.size() == 0) {
-            return null; // Если в списке нет вопросов с заданной сложностью
-        }
-        int randomIndex = (int) (Math.random() * questionsByDifficulty.size());
-        return questionsByDifficulty.get(randomIndex);
+
     }
 
 

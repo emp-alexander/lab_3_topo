@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.millionairegame.GameController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<?import javafx.scene.control.CheckBox?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.millionairegame.GameController">
+    <children>
+        <Label fx:id="questionText" layoutX="151.0" layoutY="185.0" text="Кто хочет стать миллионером?">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <Label layoutX="233.0" layoutY="24.0" text="Сумма:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="sumText" layoutX="307.0" layoutY="21.0" text="500">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnHint1" layoutX="66.0" layoutY="84.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="право на ошибку" />
+<!--        <Button fx:id="btnHint2" layoutX="227.0" layoutY="84.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="замена вопроса" />-->
+        <Button fx:id="btnHint3" layoutX="392.0" layoutY="84.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="112.0" text="50/50" />
+        <Button fx:id="giveAnsBtn" layoutX="179.0" layoutY="414.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="225.0"  text="Дать ответ" />
+        <CheckBox fx:id="answ1" layoutX="112.0" layoutY="231.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="84.0" text="Ответ 1" />
+        <CheckBox fx:id="answ2" layoutX="376.0" layoutY="231.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="84.0" text="Ответ 2" />
+        <CheckBox fx:id="answ3" layoutX="111.0" layoutY="301.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="84.0" text="Ответ 3" />
+        <CheckBox fx:id="answ4" layoutX="375.0" layoutY="301.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="84.0" text="Ответ 4" />
+        <Button fx:id="goBtn" layoutX="14.0" layoutY="414.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="84.0" onAction="#start" text="Начать игру" />
+        <Label fx:id="winText" layoutX="14.0" layoutY="10.0" text="Текущий выйгрыш:" />
+    </children>
+</Pane>
+

@@ -66,6 +66,9 @@ public class Question {
     public int getDifficulty() {
         return difficulty;
     }
+    public int getPlusOneDifficulty() {
+        return difficulty+1;
+    }
 
     public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
